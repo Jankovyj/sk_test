@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div class="question">
+  <div class="question-title">
+    <h1>{{ question.title }}</h1>
+  </div>
+  <div class="question-text">
+    <p>{{ question.text }}</p>
+  </div>
+  <div class="question-user">
+    <p>{% trans 'Author' %}: {{ question.user }}</p>
+  </div>
+  <div class="question-date">
+    <p>{% trans 'Date' %}: {{ question.dt }}</p>
+  </div>
+</div>
+{% block comments %}
+<ul>
+  {% for comment in question.comment.all %}
+  <li>
+    <div class="comment-text">
+      {{ comment.text }}
+    </div>
+    <div class="comment-author">
+      {{ comment.user }}
+    </div>
+    <div class="comment-date">
+      {{ comment.dt }}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% if user.is_authenticated %}
+<div class="add_comment">
+  <div class="comment-title">
+    <h2>{% trans 'Live a comment' %}</h2>
+  </div>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <textarea name="comment_text"></textarea>
+    <input type="submit" value="{% trans 'submit' %}">
+  </form>
+</div>
+{% endif %}
+{% endblock %}
+{% endblock %}

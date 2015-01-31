@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div class="add_question">
+  <h1>{% trans 'Ask a question' %}</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="{% trans 'Submit' %}" />
+</form>
+</div>
+{% endblock %}

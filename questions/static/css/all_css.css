@@ -1,0 +1,192 @@
+#content{
+    min-height: 450px;
+    margin: 0 auto;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 1000px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.top-panel{
+    width: 100%;
+    background: #2f2f2f;
+    background: rgba(0,0,0,0.86);
+    height: 34px;
+    line-height: 1;
+}
+
+.top-nav-enter a{
+    float: right;
+    margin-right: 30px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.top-nav-logout a{
+    float: right;
+    margin-right: 30px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.top-nav {
+    margin-top: -16px;
+}
+
+.top-nav ul{
+    list-style-type: none
+}
+
+.user{
+    float: left;
+    margin-right: 60px;
+}
+
+.title{
+    margin-bottom: 5px;   
+}
+
+.text{
+    margin-bottom: 5px;
+}
+
+#content ul li{
+    margin-top: 50px;
+    list-style-type: none;
+    border-top: 1px dotted;
+}
+
+#content ul li .dt{
+    float: right;
+}
+
+.question-title h1{
+    border-bottom: 1px solid;
+}
+
+.question-user{
+    display: inline-block;
+    float: left;
+}
+
+.question-date{
+    display: inline-block;
+    margin-left: 600px;
+}
+
+.comment-text{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.comment-author{
+    display: inline-block;
+    float: left;
+}
+
+.comment-date{
+    display: inline-block;
+    float: right;
+}
+
+.add_comment form{
+
+}
+
+.add_comment form textarea{
+    width: 700px;
+    height: 200px;
+}
+
+.add_comment form input{
+    display: inherit;
+    margin-left: 595px;
+}
+
+.add_comment .comment-title h2{
+    margin-top: 70px;
+}
+
+.add_question label, input, textarea{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add_question form{
+    margin-left: 300px;
+}
+
+#id_title{
+    width: 336px;
+    margin-bottom: 20px;
+}
+
+.add_question h1{
+    margin-left: 300px;
+}
+
+.pagination{
+    margin-top: 70px;
+}
+
+.page-links{
+    float: right;
+}
+
+.registration-form form{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.registration-form h1{
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-nav-home a{
+    float:left;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.ask-question{
+    width: 120px;
+    height: 25px;
+    background: gray;
+    float: right;
+    margin-top: 20px;
+    display: inline-block;
+    padding-top: 5px;
+    padding-left: 8px;
+    color: white;
+}
+
+.ask-question a{
+    text-decoration: none;
+    color: white;
+}
+
+.facebook{
+    margin-left: 20px;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.login-form{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form h1{
+    margin-left: -50px;
+}
+   
+

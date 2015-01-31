@@ -1,0 +1,60 @@
+{% load i18n %}
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8"/>
+    {% block meta %}
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/all_css.css' %}"/>
+    {% block extrastyle %}{% endblock %}
+    <title>{% block title %}Test task{% endblock %}</title>
+  </head>
+  <body class="{% block bodyclass %}{% endblock %}">
+    <div class="layout">
+      {% block layot-header %}
+      <div class="layout-header">
+        <!--top panel-->
+        <div class="top-panel">
+          <!--top nav-->
+          <div class="top-nav">
+            <ul>
+              <li class="top-nav-home">
+                <a href="/">{% trans 'Home' %}</a>
+              </li>
+              {% block top-nav-li %}
+              {% if user.is_authenticated %}
+              <li class="top-nav-logout">
+                <a href="{% url 'auth_logout' %}">
+                  {% trans 'Log out' %}</a>
+              </li>
+              <li class="top-nav-logout">
+                <a href="{% url 'auth_password_reset' %}">
+                  {{ user.username }}</a>
+              </li>
+              {% else %}
+              <li class="top-nav-enter">
+                <a href="{% url 'auth_login' %}">{% trans "Enter" %}</a>
+              </li>
+              {% endif %}
+              {% endblock %}
+            </ul>
+            {% block extra-top-nav %}{% endblock %}
+          </div>
+          <!--end top nav-->
+        </div>
+      </div>
+    </div>
+    <!--end top panel-->
+    {% block extra-layout-header %}{% endblock %}
+    {% endblock %}
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>
+    <div class="clear"></div>
+</div>
+{% block extra-js %}
+{% endblock %}
+</body>
+</html>
